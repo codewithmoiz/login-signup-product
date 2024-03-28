@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Products Page</title>
+
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+<style>
+    .product-card {
+        transition: transform 0.3s ease;
+    }
+
+    .product-card:hover {
+        transform: translateY(-5px);
+    }
+    .product-card img{
+        width: 100%;
+        object-fit: contain;
+        object-position: center;
+    }
+
+    .quantity-button {
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+        font-size: 18px !important;
+        padding-bottom: 1px;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+     
+    }
+    .quantity-button:active{
+        transform: scale(0.97);
+    }
+    .check-out-btn{
+        position: fixed;
+        top: 4.5%;
+        right: 2%;
+        z-index: 100 !important;
+    }
+
+    .cart-container {
+    position: fixed;
+    top: 0;
+    right: -500px;
+    width: 500px;
+    height: 100%;
+    background-color: white;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+    transition: right 0.3s ease;
+    overflow-y: auto;
+    z-index: 1000;
+}
+
+.cart-list {
+    padding: 20px;
+}
+
+.cart-container.open {
+    right: 0;
+}
+
+</style>
+
+</head>
+<body class="bg-gray-100">
+
+    <div id="cart-container" class="cart-container">
+        <button onclick="alert('Your order has been placed')" id="close-cart-btn" class="block w-full max-w-xs mx-auto my-3 bg-indigo-500 hover:bg-indigo-700 focus:bg-indigo-700 text-white rounded-lg px-3 py-3 font-semibold">Confirm</button>
+        <div id="cart-list" class="cart-list">
+
+        </div>
+    </div>
+    
+
+<div class="container mx-auto px-4 py-8">
+    <h1 class="text-3xl font-bold text-gray-900 mb-8 text-center">OUR PRODUCTS.</h1>
+    <button class="check-out-btn bg-transparent border border-indigo-500 text-indigo-500 hover:text-white font-semibold rounded-lg hover:bg-indigo-600 px-3 py-2 focus:outline-none">Checkout</button>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 cards-container">
+   <!-- Product Cards -->
+    </div>
+</div>
+
+
+<script src="script.js"></script>
+</body>
+</html>

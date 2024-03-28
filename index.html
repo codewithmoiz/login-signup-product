@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Registration Form</title>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100">
+
+<div class="min-h-screen flex items-center justify-center relative overflow-hidden">
+
+<div class="parent text-gray-500 shadow-xl w-full overflow-hidden relative" style="max-width: 500px;">
+    <div class="w-full mx-auto py-10 px-5 md:px-10">
+        <div class="text-center mb-10">
+            <h1 class="font-bold text-3xl text-gray-900">REGISTER.</h1>
+            <p>Enter your information to register</p>
+        </div>
+        <div>
+            <form action="login.html">
+            <div class="flex -mx-3">
+                <div class="w-1/2 px-3 mb-5">
+                    <label for="sign-up-first" class="text-xs font-semibold px-1">First name</label>
+                    <div class="flex">
+                        <div class="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center"><i class="mdi mdi-account-outline text-gray-400 text-lg"></i></div>
+                        <input id="sign-up-first" type="text" name="first_name" class="w-full -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-200 custom-input outline-none focus:border-indigo-500" placeholder="abc" required>
+                    </div>
+                </div>
+                <div class="w-1/2 px-3 mb-5">
+                    <label for="sign-up-last" class="text-xs font-semibold px-1">Last name</label>
+                    <div class="flex">
+                        <div class="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center"><i class="mdi mdi-account-outline text-gray-400 text-lg"></i></div>
+                        <input id="sign-up-last" type="text" name="last_name" class="w-full -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-200 custom-input outline-none focus:border-indigo-500" placeholder="xyz" required>
+                    </div>
+                </div>
+            </div>
+            <div class="flex -mx-3">
+                <div class="w-full px-3 mb-5">
+                    <label for="sign-up-email" class="text-xs font-semibold px-1">Email</label>
+                    <div class="flex">
+                        <div class="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center"><i class="mdi mdi-email-outline text-gray-400 text-lg"></i></div>
+                        <input id="sign-up-email" type="email" name="email" class="w-full -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-200 custom-input outline-none focus:border-indigo-500" placeholder="example@email.com" required>
+                    </div>
+                </div>
+            </div>
+            <div class="flex -mx-3">
+                <div class="w-full px-3 mb-12">
+                    <label for="sign-up-password" class="text-xs font-semibold px-1">Password</label>
+                    <div class="flex">
+                        <div class="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center"><i class="mdi mdi-lock-outline text-gray-400 text-lg"></i></div>
+                        <input id="sign-up-password" type="password" name="password" class="w-full -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-200 custom-input outline-none focus:border-indigo-500" placeholder="************" required>
+                    </div>
+                </div>
+            </div>
+            <div class="flex -mx-3">
+                <div class="w-full px-3 mb-5">
+                    <button onclick="getSignUpData()" id="sign-up-btn" type="button" class="block w-full max-w-xs mx-auto bg-indigo-500 hover:bg-indigo-700 focus:bg-indigo-700 text-white rounded-lg px-3 py-3 font-semibold">REGISTER NOW</button>
+                </div>
+            </div>
+        </form>
+        </div>
+    </div>
+</div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
